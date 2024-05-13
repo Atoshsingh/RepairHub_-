@@ -64,31 +64,25 @@ function Signup() {
         
         }
     }
-    // const sumbit = async ()=>{
-    //     console.log("submit called! ");
-    // }
     return (
-        <div className={style2.mainDiv}>
-            <div className={style.mainLoginDiv}>
-
-                <div className={style.innerLoginDiv}>
-                    <form >
-
+            <div className={style.upDiv}>
+                <div className={style.inDiv}>
+                <h1 className={style.heading}>
+                        CREATE ACCOUNT
+                    </h1>
+                    <form className={style.forms}>
                         <input className={style.loginName} type="text" placeholder='username' onChange={setName} required />
                         <input className={style.loginEmail} type="email" placeholder='email' onChange={setEmail} required />
                         <input className={style.loginPassword} type="text" placeholder='password' onChange={setPassword} required />
                         <input className={style.loginConfirmPassword} type="text" onChange={setConfirm} placeholder='confirm password' required />
-                        <button onClick={submit}>Submit</button>
-                        <Link to="/login" className="link link-primary m-10 p-10">
+                        <button className={style.buttones} onClick={submit}>Submit</button>
+                        <div className={style.downer}>
+                        <label className={style.labeling}> have an Account ? </label> <Link to="/login" className={style.links}>
                             Login
                         </Link>
-
+                        </div>
                     </form>
-
-
                 </div>
-
-            </div>
             <ToastContainer />
         </div>
     );

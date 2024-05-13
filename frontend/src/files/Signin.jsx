@@ -15,6 +15,7 @@ function Signin() {
     const [values, setValue] = useState({ email: "", password: "" });
     const [a, setA] = useState(0);
     function setEmail(event) {
+
         setValue(c => ({ ...c, email: event.target.value }))
     }
     function setPassword(event) {
@@ -73,25 +74,26 @@ function Signin() {
     }
     return (
        <>
-        <div className={style2.mainDiv}>
-            <div className={style.mainLoginDiv}>
-                <div className={style.innerLoginDiv}>
-                    <form>
+       <div className={style.upDiv}>
+                <div className={style.inDiv}>
+                    <h1 className={style.heading}>
+                        LOGIN
+                    </h1>
+                    <form className={style.forms}>
                         <input className={style.loginEmail} type="email" placeholder='email' onChange={setEmail} required />
                         <input className={style.loginPassword} type="text" placeholder='password' onChange={setPassword} required />
-                        <button onClick={submit}>Submit</button>
-                        <h3 className={style.registerButton} >
-                            <Link to="/signup" className="link link-primary m-10 p-10">
+                        <button className={style.buttones} onClick={submit}>Submit</button>
+                        <div className={style.downer}>
+                         <label className={style.labeling}>Not a member ? </label>  <Link to="/signup" className={style.links}>
                                 Register
                             </Link>
-                        </h3>
+                        </div>
                     </form>
                 </div>
                 {/* //{user &&  <h2 > user logged in {user[0].email}</h2>} */}
             </div>
             {/* {authUser && <h1>Logged in </h1>} */}
             <ToastContainer />
-        </div>
         </>
     );
 }

@@ -39,7 +39,7 @@ function Home() {
         loop:true,
         typeSpeed: 2,
         deleteSpeed: 5
-    })loc
+    })
     return (
         <>
             <Header />

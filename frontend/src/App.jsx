@@ -34,6 +34,10 @@ function App() {
       element:<Home/>
     },
     {
+      path:"*",
+      element:<Home/>
+    },
+    {
       path:"/appliances/:imageNumebr",
       element:<Appliances/>
     },

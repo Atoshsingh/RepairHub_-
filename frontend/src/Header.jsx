@@ -36,11 +36,11 @@ function Header() {
                 <div className={style.logout} 
                 onClick={logout}
                 >
-                LogOut
+                Logout
                 </div>
                 }
                 {
-                    isLoggedIn && <h4> {authUser.name}</h4>
+                    isLoggedIn && <h4 className={style.topName}> {authUser.name}</h4>
                 }
                
             </div>
